@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1524873399 source:d:\documentos\unal\programación\ejercicios\main.cpp
+	<iostream>
+	"numericos.h"
+
+1524872881 d:\documentos\unal\programación\ejercicios\numericos.h
+
+1524873375 source:d:\documentos\unal\programación\ejercicios\numericos.cpp
+	<iostream>
+	"numericos.h"
+
