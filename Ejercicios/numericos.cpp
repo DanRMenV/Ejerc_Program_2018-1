@@ -6,13 +6,12 @@ using namespace std;
 int potencia(int a, int n){
     int pot=1;
     for(int i = 0 ; i < n ; i++ ){
-        pot = pot * n;
+        pot = pot * a;
     }
     return pot;
 }
 
 bool divisible(int a, int b){
-
     return a % b == 0;
 }
 

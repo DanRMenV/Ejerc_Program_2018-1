@@ -14,6 +14,7 @@ int main()
 {
     int a;
     cin>>a;
-    cout<<divisible(a,2)<<endl;
+    cout<<primo(a)<<endl;
+
   return 0;
 }
