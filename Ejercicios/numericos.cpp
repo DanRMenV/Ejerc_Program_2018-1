@@ -3,12 +3,12 @@
 
 using namespace std;
 
-int potencia(int a, int b){
-    int p=1;
-    for(int i = 0 ; i < b ; i++ ){
-        p = p * a;
+int potencia(int a, int n){
+    int pot=1;
+    for(int i = 0 ; i < n ; i++ ){
+        pot = pot * n;
     }
-    return p;
+    return pot;
 }
 
 bool divisible(int a, int b){
