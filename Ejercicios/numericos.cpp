@@ -53,7 +53,7 @@ double ev_punto(double a, double b, double c, double x){
 
 }
 
-double coef_lin_der(double a, double b, double c, double x){
+double coef_lin_der(double a, double b, double c){
 
     return 2*a;
 
