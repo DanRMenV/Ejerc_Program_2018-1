@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1524160357 source:c:\users\dnia-a-20\documents\c++\ordenar\a_entero.cpp
+	"A_entero.h"
+
+1524160357 c:\users\dnia-a-20\documents\c++\ordenar\a_entero.h
+
+1525801215 source:c:\users\dnia-a-20\documents\c++\ordenar\main.cpp
+	<iostream>
+	"negocio.h"
+
+1525801171 c:\users\dnia-a-20\documents\c++\ordenar\negocio.h
+
+1524160357 source:c:\users\dnia-a-20\documents\c++\ordenar\a_reales.cpp
+	"A_reales.h"
+
+1524160531 c:\users\dnia-a-20\documents\c++\ordenar\a_reales.h
+
+1525801171 source:c:\users\dnia-a-20\documents\c++\ordenar\negocio.cpp
+	"negocio.h"
+
