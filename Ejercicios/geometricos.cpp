@@ -24,7 +24,13 @@ double* inter(double p1, double c1, double p2, double c2){
     return r;
 }
 
-
+double tri_cir(double r){
+	double h = (2*r)+r;
+	double b = 2*(r*1.73205080757);
+	double a = (b*h)/2;
+	return a;
+}
+    
 double ar_cu_ins(int r){
     int d=2*r;
 
@@ -64,3 +70,20 @@ double per_hx_ins(int r){
 
     return 6*r;
 }
+
+double cua_cir(double r){
+	double c = 4*r;
+	return c;
+}
+
+double pen_cir(double r){
+	double l = 2*(r/1.73205080757);
+	double p = (5*l*r)/2;
+	return p;
+}
+
+double hex_cir(double r){
+	double l = 2*(r/1.73205080757);
+	double p = (6*l*r)/2;
+	return p;
+}    
