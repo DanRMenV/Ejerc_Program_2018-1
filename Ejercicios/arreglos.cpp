@@ -36,7 +36,7 @@ void escribir_criba(bool *a, int n){
 
     for(int i = 2; i<n;i++){
         if(a[i]){
-            cout<<i<<endl;
+            cout<<i<<", ";
         };
     };
 };
