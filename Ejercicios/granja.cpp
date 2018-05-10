@@ -12,22 +12,21 @@ int huevos (int A){
 
 }
 
-int escorpiones( int ep, int em, int eg ){
-    int pes = 20*ep + 30*em + 50*eg ;
-    int pob_i = (ep + em + eg)/3;
+int escorpiones( int P, int M, int G ){
+    int pes = 20*P + 30*M + 50*G ;
+    int pob_i = (P + M + G)/3;
     int pob_f = (2/3)* pob_i;
     
-        if (pob_i<=eg){
+        if (pob_i<=G){
             return pob_i*0.05;
-        }else if (6+em>=pob_i){
-            return eg*0.05+(pob_i-eg)*0.03;
+        }else if (6+M>=pob_i){
+            return G*0.05+(pob_i-G)*0.03;
         }else{
-            return eg*0.05+em*0.03+(pob_i-eg-em)*0.02;
+            return G*0.05+M*0.03+(pob_i-G-M)*0.02;
         }
 }
 
 
-}
 
 char* c_corral(int p, int q, int s, int m, int n){
     int pm = 2*4*q*(m+n);
