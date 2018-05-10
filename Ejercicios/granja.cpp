@@ -1,5 +1,4 @@
 #include "granja.h"
-#include "numericos.h"
 
 double leche( int v, double n, double m, double M, double x ){
 
