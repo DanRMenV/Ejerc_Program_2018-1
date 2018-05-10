@@ -44,13 +44,13 @@ double per_cu_ins(int r){
     return 4*raiz(per);
 }
 
-double ar_pe_ins(int r){
+/*double ar_pe_ins(int r){
 
     double h=raiz((r*r)-((r/2)*(r/2)));
     double t=r*h/2;
 
     return 5*t;
-}
+}No lo copien*/ 
 
 double per_pe_ins(int r){
 
