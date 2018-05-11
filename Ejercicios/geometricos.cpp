@@ -71,19 +71,34 @@ double per_hx_ins(int r){
     return 6*r;
 }
 
-double cua_cir(double r){
-	double c = 4*r;
-	return c;
-}
-
-double pen_cir(double r){
-	double l = 2*(r/1.73205080757);
-	double p = (5*l*r)/2;
+double percua_cir(double r){
+	double p = 4*2*r;
 	return p;
 }
 
-double hex_cir(double r){
+double cua_cir(double r){
+	double c = 2*r*2*r;
+	return c;
+}
+
+double perpen_cir(double r){
 	double l = 2*(r/1.73205080757);
-	double p = (6*l*r)/2;
+	return 5*l;
+}
+
+double pen_cir(double r){
+	
+	double p = (5*perpen_cir(r)*r)/2;
+	return p;
+}
+
+double perhex_cir(double r){
+	double l = 2*(r/1.73205080757);
+	return 6*l;
+}
+
+double hex_cir(double r){
+	
+	double p = (6*perhex_cir(r)*r)/2;
 	return p;
 }    
