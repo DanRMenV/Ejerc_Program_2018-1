@@ -51,32 +51,4 @@ double* rest_pol(double* A, double* B, int n){
     }
 }
 
-double* mult_pol(double* A, double* B, int n){
-    if(n==0){
-        A[0]= A[0]*B[0];
-        return A;
-    }else{
-        A[n]=A[n]*B[n];
-        return mult_pol(A,B,n-1);
-    }
-}
 
-double* div_pol(double* A, double* B, int n){
-    if(n==0){
-        A[0]= A[0]/B[0];
-        return A;
-    }else{
-        A[n]=A[n]/B[n];
-        return div_pol(A,B,n-1);
-    }
-}
-
-double* resid_pol(double* A, double* B, int n){
-    if(n==0){
-        A[0]= A[0]%B[0];
-        return A;
-    }else{
-        A[n]=A[n]%B[n];
-        return resid_pol(A,B,n-1);
-    }
-}
