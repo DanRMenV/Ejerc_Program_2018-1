@@ -12,17 +12,22 @@ int contar(int a,int b){
 }
 
 int* dec_bin(int a, int n){
-    int* X = new int[n];
-    
+    int* X = new int[n];   
     for(int i = 0; i < n; i++){
         X[i] = a % 2;
         a= a/2;
     }
-    X[n]=a/2;
-    
+    X[n]=a/2;   
     return X;
-
 }
+
+int decim(bool* a, int n){
+    if(n==1){
+        return a[0]*1;
+    }else{
+        return decim(a,n-1)+(a[n-1]*potencia(2,n-1));
+    };
+};
 
 
 int main() {
