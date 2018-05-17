@@ -2,11 +2,11 @@
 using namespace std;
 
 int* mult(int* a, int* b, int n){
-    int t=(2*n)+1;
+    int t=(2*n)-1;
     int* c= new int[t];
     
-    for(int i=0; i<=n; i++){
-        for(int j=0; j<=n; j++){
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
             c[i+j]= c[i+j]+ (a[i]*b[j]);
         }
     }
@@ -22,8 +22,8 @@ void escribir_arreglo(int* X, int n){
 
 int main() {
     int n=2;
-    int* a= new int[n+1];
-    int* b= new int[n+1];
+    int* a= new int[n];
+    int* b= new int[n];
    
     int t=(2*n)+1;
     int* c= new int[t];
