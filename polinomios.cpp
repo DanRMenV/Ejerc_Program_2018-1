@@ -31,24 +31,37 @@ double evaluar_pol(double* A, double x, int n, int e ){
     };
 };
 
-double* sum_pol(double* A, double* B, int n){
-    if(n==0){
-        A[0]= A[0]+B[0];
-        return A;
-    }else{
-        A[n]=A[n]+B[n];
-        return sum_pol(A,B,n-1);
+double* sumar_polinomioos(double* a,int n, double* b, int m){
+    int j = mayor_int(n,m);
+    double* y = crear_arreglo_double(j);
+    for(int i=j;i>=0;i--){
+        if(n==m){
+            y[i] = a[i] + b[i];
+        }if(n>m){
+            y[i] = a[n];
+            n--;
+        }if(n<m)
+            {
+            y[i] = b[m];
+            m--;
+        }
     }
+    return y;
 }
 
-double* rest_pol(double* A, double* B, int n){
-    if(n==0){
-        A[0]= A[0]-B[0];
-        return A;
-    }else{
-        A[n]=A[n]-B[n];
-        return rest_pol(A,B,n-1);
+double* restar_polinomios(double* a,int n, double* b, int m){
+    int j = mayor_int(n,m);
+    double* y = crear_arreglo_double(j);
+    for(int i=j;i>=0;i--){
+        if(n==m){
+            y[i]=a[i]-b[i];
+        }if(n>m){
+            y[i]=a[n];
+            n--;
+        }if(n<m){
+            y[i]=b[m];
+            m--;
+        }
     }
+    return y;
 }
-
-
