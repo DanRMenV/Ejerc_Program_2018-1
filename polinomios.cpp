@@ -69,7 +69,13 @@ double* restar_polinomios(double* a,int n, double* b, int m){
 
 //Mios 
 
-
+double evaluar_pol(double* A, double x, int n){
+    if(n==0){
+        return A[0]* pot(x,n);
+    }else{
+        return evaluar_pol(A,x,n-1)+ A[n]*pot(x,n);
+    };
+};
 double* sum_pol(double* A, double* B, int n, int m){
     if(m<n){
         for(int i=0;i<=m;i++){
