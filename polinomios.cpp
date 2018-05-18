@@ -65,3 +65,53 @@ double* restar_polinomios(double* a,int n, double* b, int m){
     }
     return y;
 }
+
+
+//Mios 
+
+
+double* sum_pol(double* A, double* B, int n, int m){
+    if(m<n){
+        for(int i=0;i<=m;i++){
+            A[i]=A[i]+B[i];
+        }
+        return A;
+    }
+    else{
+        for(int i=0;i<=n;i++){
+            B[i]=A[i]+B[i];
+        }
+        return B;
+    };
+};
+
+double* rest_pol(double* A, double* B, int n, int m){
+    if(m<n){
+        for(int i=0;i<=m;i++){
+            A[i]=A[i]-B[i];
+        }
+        return A;
+    }
+    else{
+        for(int i=0;i<=n;i++){
+            B[i]=A[i]-B[i];
+        }
+        return B;
+    };
+};
+
+double* mult_pol(double* a, double* b, int n, int m){
+    int t=n+m;
+    double* c= crear_arreglo_pol(t);
+    c=ini(c,t);
+    for(int i=0; i<=n; i++){
+        for(int j=0; j<=m; j++){
+            c[i+j]= c[i+j]+ (a[i]*b[j]);
+        }
+    }
+    return c;
+};
+
+
+
+
