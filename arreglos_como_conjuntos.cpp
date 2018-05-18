@@ -32,18 +32,22 @@ int* interseccion(int* x,int m, int* y,int n){
 }
 
 int* diferencia(int* x,int m, int* y,int n){
+    int* u = crear_arreglo_int(m);
+    for(int i=0;i<m;i++){
+        u[i] = x[i];
+    }
     for(int i=0;i<m;i++){
         for(int l=0;l<n;l++){
             if(x[i]==y[l]){
-                x[i] = 0;
+                u[i] = 0;
             }
         }
     }
     int h =1;
     int* c = new int[h];
     for(int i=0;i<m;i++){
-        if(x[i]!=0){
-            c[h++] = x[i];
+        if(u[i]!=0){
+            c[h++] = u[i];
         }
     }
     c[0] = h;
@@ -53,25 +57,19 @@ int* diferencia(int* x,int m, int* y,int n){
 int* diferencia_simetrica(int* x,int m, int* y,int n){
     int* p = diferencia(x,m,y,n);
     int* o = diferencia(y,n,x,m);
-    return o;
-    /*int a = p[0];
-    int b = o[0];
-    int* l = unio(p,a,o,b);
-    return l;
     int a = p[0];
     int b = o[0];
-    int s = a+b+1;
+    int s = a+b-1;
     int* d = crear_arreglo_int(s);
     d[0] = s;
-    for(int i=1;i<=a;i++){
+    for(int i=1;i<a;i++){
         d[i] = p[i];
     }
-    for(int i=a+1;i<s;i++){
-            int w = i-a;
-            d[i] = o[w];
+    int t=1;
+    for(int i=a;i<s;i++){
+            d[i] = o[t++];
     }
     return d;
-    */
 }
 
 bool* pertenece(int* x,int m, int* y,int n, int p){
