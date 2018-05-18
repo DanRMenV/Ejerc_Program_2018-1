@@ -1,17 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int* mult(int* a, int* b, int n){
-    int t=(2*n)-1;
+int* mult(int* a, int* b, int n, int m){
+    int t=(m+n)+1;
     int* c= new int[t];
     
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
+    for(int i=0; i<=n; i++){
+        for(int j=0; j<=m; j++){
             c[i+j]= c[i+j]+ (a[i]*b[j]);
         }
     }
     return c;
-    
 }
 
 void escribir_arreglo(int* X, int n){
