@@ -1,8 +1,8 @@
 #include "granja.h"
 
-double leche( int v, double n, double m, double M, double x ){
+double leche( int v, double n, double me, double M, double x ){
 
-    return (n*m*x)/(v*M);
+    return (n*me*x)/(v*M);
 
 }
 
